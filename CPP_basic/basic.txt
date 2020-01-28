@@ -1,0 +1,49 @@
+In CPP, << >> indicates data flow. >> means data flows to right.
+
+using std::cout; -> it only can use cout not endl etc..
+
+It is recommended that using std::USING_METHOD. because it might be has crashed issue.
+
+/* */ is explanatory notes for several lines.
+
+argument and parameter is different concept. parameter is def plus(a, b)'s a, b is parameter.
+argument is plus(1, 2)'s 1, 2 is argument in other words real value.
+
+In Header file, it has declaration.
+
+CPP is like C, function must be located bottom of the main function or declared above main function.
+
+CPP is object oriented programming language, so if you can, let main function have only execute funtion.
+
+ICU is Initialize, Condition, Update -> fit for 'for loop'
+
+CPP is object oriented programming. yeah that's right. let's  beginning.
+
+1) function : it has value like integer, string, even void.
+2) method : method is object's function. that's all. call it from object.
+3) static method : class's object's function.
+4) constructor : it returns object.
+
+1) headerfile - declarations
+2) implementation file - definitions
+3) main file - calling
+
+.h is indicated by all corresponding .cpp files 
+g++ file1.cpp file2.cpp
+g++ -c makes .o file, it is encrpyted
+
+make is one-key or magic-key solution
+
+namespace
+1) common functionality
+2) a particular company
+3) classifying categories
+
+members are acess modifiers that is public, private, protected.
+struct by default public.
+class by default private.
+In c++, struct and class is near concenpt unlike other languages.
+DO KEEP IN THAT MIND.
+
+In C++, you don't need to call constructor by this : User user1 =new User();
+it is called by automatically User user1;
