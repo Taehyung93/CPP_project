@@ -47,13 +47,72 @@ void fast_a_plus_b(){
     
     int T, A, B;
     std::cin >> T;
- 
+    int int_array[T];
     for (int i = 0; i < T; i++) {
         std::cin >> A >> B;
-        std::cout << A + B << '\n';
+        int_array[i] = A + B;
+        
+    }
+    for (int i = 0; i < T; i++){
+        std::cout << int_array[i] << '\n';
     }
 }
 
+void pickNs(){
+    int N;
+    std::cin >> N;
+    for (int i = 1; i < N+1; i++){
+        std::cout << i << "\n";
+    }
+
+}
+
+void reversePickNs(){
+    int N;
+    std::cin >> N;
+    for (int i = N; i > 0; i--){
+        std::cout << i << "\n";
+    }
+}
+
+void prettyAplusB(){
+    int n;
+    std::cin >> n;
+    int a_array[n], b_array[n];
+    for (int i = 0; i < n ; i++){
+        std::cin >> a_array[i] >> b_array[i];
+    }
+    for (int i = 0; i < n ; i++){
+        std::cout << "Case #" << i+1 << ": " << a_array[i] + b_array[i] << "\n";
+    }
+}
+
+void mostPrettyAplusB(){
+    int n;
+    std::cin >> n;
+    int a_array[n], b_array[n];
+    for (int i = 0; i < n ; i++){
+        std::cin >> a_array[i] >> b_array[i];
+    }
+    for (int i = 0; i < n ; i++){
+        std::cout << "Case #" << i+1 << ": " << a_array[i] << " + " <<   b_array[i] << " = " << a_array[i] + b_array[i] << "\n";
+    }
+}
+
+void pickStar(){
+    int n;
+    std::cin >> n;
+
+    for (int i = 0; i < n; i++){
+        for(int j = 0; j < i + 1; j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+
+
+}
+
 int main(){
-    fast_a_plus_b();
+    pickStar();
     }
