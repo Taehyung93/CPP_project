@@ -109,10 +109,69 @@ void pickStar(){
         }
         printf("\n");
     }
+}
 
+void pickStarReverseFail(){
+    int n;
+    std::cin >> n;
+    char array_char[n];
+    for (int i = 0; i < n; i++){
+        array_char[i] = ' ';
+    }
+    //printf is c grammer so it does not work c++ grammer 
+    //printf(array_char) works but std::string does not work
+    for (int i = 1; i < n + 1; i++){
+        array_char[n-i] = '*';
+        std::cout << array_char << "\n";
+    }
+    // over 3, @ appears after end  of line..
+}
 
+void pickStarReverseSuccess(){
+    int n;
+    std::cin >> n;
+    std::string array_string[n];
+    for (int i = 0; i < n; i++){
+        array_string[i] = " ";
+    }
+    //simply cout << array_string it will show address output.
+    for (int i = 1; i < n + 1; i++){
+        array_string[n-i] = "*";
+        for (const auto &star : array_string){
+            std::cout << star;
+        }
+        std::cout << "\n";
+    }
+}
+
+//이게 내가 원하는 방식의 코딩이다. 아래 방식으로 코딩을 하는 것이 중요하다.
+//언어에 dependency 없게 말이다. 
+//그러기위해 코딩에 들어가는 재료는 간소하며, 심플하면서 치열한 Logic만이 존재하게 말이다.
+void pickStarReverse(){
+    int n;
+    std::cin >> n;
+
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++){
+            if (j < n - i - 1) printf(" ");
+            else printf("*");
+        }
+        printf("\n");
+    }
+}
+
+void lessThanX(){
+    int n, x;
+    std::cin >> n >> x;
+    int array[n];
+    for (int i = 0; i < n; i++){
+        std::cin >> array[i];
+    }
+    for (int i = 0; i < n; i++){
+        if (array[i] < x) std::cout << array[i] << " ";
+    }
 }
 
 int main(){
-    pickStar();
+    lessThanX();
     }
