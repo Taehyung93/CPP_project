@@ -47,3 +47,6 @@ DO KEEP IN THAT MIND.
 
 In C++, you don't need to call constructor by this : User user1 =new User();
 it is called by automatically User user1;
+
+How to c11 compile 
+g++ -std=c++11

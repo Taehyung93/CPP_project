@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <vector>
 
 void minAndmax(){
     int a;
@@ -41,6 +43,44 @@ void maxAndLocate(){
     }
 }
 
+void numberOfNumbers(){
+    char buff[0]; 
+    int a[3],b,d[10] = {0};
+    for (int i = 0 ; i < 3 ; i++){
+        std::cin >> a[i];
+    }
+    b = a[0]*a[1]*a[2];
+    std::string c = std::to_string(b);
+    for (int i=0; i < c.length(); i++){
+        for(int j=0; j < 10; j++){
+            sprintf(buff,"%d",j);
+            if (c[i] == buff[0]) d[j] += 1 ;
+        }
+    }
+    for (int i=0; i < 10; i++){
+        std::cout << d[i] << std::endl;
+    }
+}
+
+void modulo(){
+    std::vector<int> number;
+    int minus = 0, int_temp;
+    for(int i=0; i<10; i++){
+        std::cin >> int_temp;
+        int_temp = int_temp %  42;
+        number.push_back(int_temp);
+    }
+    for(int i=0; i<9; i++){
+        for(int j=i; j<9; j++){
+            if (number[i] == number[j+1]){
+                minus += 1;
+                number[j+1] = 100 + minus;
+            }
+        }
+    }
+    std::cout << 10 - minus;
+}
+
 int main(){
-    maxAndLocate();
+    modulo();
 }
